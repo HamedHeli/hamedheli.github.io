@@ -1,14 +1,15 @@
 import { Project, ProjectCard } from "./ProjectCard";
 
 const projects: Project[] = [
+const projects: Project[] = [
   {
-    title: "Image Classification with CNNs",
+    title: "Machine Learning Models from Scratch",
     description:
-      "A convolutional neural network trained on CIFAR-10 with data augmentation, dropout, and learning-rate scheduling. Includes confusion-matrix analysis.",
-    tags: ["PyTorch", "CNN", "Computer Vision"],
-    notebook: "notebooks/cifar10_cnn.ipynb",
+      "Pure-Python implementations of core ML algorithms: KNN, Decision Trees, Logistic Regression, PCA, k-Means, and more. Each model built from the ground up with NumPy, no black-box libraries.",
+    tags: ["Python", "NumPy", "Algorithms"],
+    notebook: "notebooks/ml_from_scratch.ipynb",
     repo: "your-username/ml-portfolio",
-    highlight: "92.4% test accuracy on CIFAR-10",
+    highlight: "100% from-scratch code, no scikit-learn",
   },
   {
     title: "Sentiment Analysis with BERT",
