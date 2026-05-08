@@ -1,7 +1,6 @@
 import { Project, ProjectCard } from "./ProjectCard";
 
 const projects: Project[] = [
-const projects: Project[] = [
   {
     title: "Machine Learning Models from Scratch",
     description:
