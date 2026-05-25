@@ -9,6 +9,11 @@ export interface Project {
   repo: string; // full repo, e.g. "username/repo"
   branch?: string;
   highlight?: string;
+  githubUrl?: string; // optional override
+  viewerUrl?: string | null; // null hides the button
+  viewerLabel?: string;
+  extraUrl?: string | null; // null hides the button
+  extraLabel?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
