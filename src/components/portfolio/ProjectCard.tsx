@@ -9,13 +9,22 @@ export interface Project {
   repo: string; // full repo, e.g. "username/repo"
   branch?: string;
   highlight?: string;
+  githubUrl?: string; // optional override
+  viewerUrl?: string | null; // null hides the button
+  viewerLabel?: string;
+  extraUrl?: string | null; // null hides the button
+  extraLabel?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const branch = project.branch ?? "main";
-  const githubUrl = `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`;
-  const nbviewerUrl = `https://nbviewer.org/github/${project.repo}/blob/${branch}/${project.notebook}`;
-  const colabUrl = `https://colab.research.google.com/github/${project.repo}/blob/${branch}/${project.notebook}`;
+  const githubUrl = project.githubUrl ?? `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`;
+  const viewerUrl = project.viewerUrl === undefined
+    ? `https://nbviewer.org/github/${project.repo}/blob/${branch}/${project.notebook}`
+    : project.viewerUrl;
+  const extraUrl = project.extraUrl === undefined
+    ? `https://colab.research.google.com/github/${project.repo}/blob/${branch}/${project.notebook}`
+    : project.extraUrl;
 
   return (
     <article
@@ -57,16 +66,20 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
           </a>
         </Button>
-        <Button asChild size="sm" variant="outline-soft">
-          <a href={nbviewerUrl} target="_blank" rel="noreferrer">
-            <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> nbviewer
-          </a>
-        </Button>
-        <Button asChild size="sm" variant="ghost-glow">
-          <a href={colabUrl} target="_blank" rel="noreferrer">
-            Open in Colab
-          </a>
-        </Button>
+        {project.viewerUrl !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={viewerUrl} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.viewerLabel ?? "nbviewer"}
+            </a>
+          </Button>
+        )}
+        {project.extraUrl !== null && (
+          <Button asChild size="sm" variant="ghost-glow">
+            <a href={extraUrl} target="_blank" rel="noreferrer">
+              {project.extraLabel ?? "Open in Colab"}
+            </a>
+          </Button>
+        )}
       </div>
     </article>
   );
