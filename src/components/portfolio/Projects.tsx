@@ -6,7 +6,7 @@ const projects: Project[] = [
     description:
       "Pure-Python implementations of core ML algorithms: KNN, Decision Trees, Logistic Regression, PCA, k-Means, and more. Each model built from the ground up with NumPy, no black-box libraries.",
     tags: ["Python", "NumPy", "Algorithms"],
-    notebook: "notebooks/ml_from_scratch.ipynb",
+    notebook: "notebooks/ml-from-scratch.ipynb",
     repo: "hamedheli/ml-from-scratch", 
     highlight: "100% from-scratch code, no scikit-learn",
   },
