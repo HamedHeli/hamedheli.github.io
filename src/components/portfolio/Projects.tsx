@@ -18,10 +18,9 @@ const projects: Project[] = [
     notebook: "DataAnalysis/Training & Test/Unbalanced Dataset",
     repo: "HamedHeli/Appeal-Prediction",
     highlight: "Overall Accuracy: +90% on 1.5% Minority Class",
-    viewerLabel: "Posit Cloud",
     viewerUrl: null,
     extraLabel: "View HTML Report",
-    extraUrl: null,
+    extraUrl: "https://hamedheli.github.io/Appeal-Prediction/Training%20%26%20Test/Unbalanced%20Dataset/Unbalanced-Dataset.html",
   },
 ];
 
