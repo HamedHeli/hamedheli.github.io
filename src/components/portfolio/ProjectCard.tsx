@@ -18,9 +18,13 @@ export interface Project {
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const branch = project.branch ?? "main";
-  const githubUrl = `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`;
-  const nbviewerUrl = `https://nbviewer.org/github/${project.repo}/blob/${branch}/${project.notebook}`;
-  const colabUrl = `https://colab.research.google.com/github/${project.repo}/blob/${branch}/${project.notebook}`;
+  const githubUrl = project.githubUrl ?? `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`;
+  const viewerUrl = project.viewerUrl === undefined
+    ? `https://nbviewer.org/github/${project.repo}/blob/${branch}/${project.notebook}`
+    : project.viewerUrl;
+  const extraUrl = project.extraUrl === undefined
+    ? `https://colab.research.google.com/github/${project.repo}/blob/${branch}/${project.notebook}`
+    : project.extraUrl;
 
   return (
     <article
