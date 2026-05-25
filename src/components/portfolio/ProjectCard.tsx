@@ -66,16 +66,20 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
           </a>
         </Button>
-        <Button asChild size="sm" variant="outline-soft">
-          <a href={nbviewerUrl} target="_blank" rel="noreferrer">
-            <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> nbviewer
-          </a>
-        </Button>
-        <Button asChild size="sm" variant="ghost-glow">
-          <a href={colabUrl} target="_blank" rel="noreferrer">
-            Open in Colab
-          </a>
-        </Button>
+        {project.viewerUrl !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={viewerUrl} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.viewerLabel ?? "nbviewer"}
+            </a>
+          </Button>
+        )}
+        {project.extraUrl !== null && (
+          <Button asChild size="sm" variant="ghost-glow">
+            <a href={extraUrl} target="_blank" rel="noreferrer">
+              {project.extraLabel ?? "Open in Colab"}
+            </a>
+          </Button>
+        )}
       </div>
     </article>
   );
