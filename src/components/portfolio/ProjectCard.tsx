@@ -80,6 +80,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
+        {project.kaggleUrl !== undefined && project.kaggleUrl !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={project.kaggleUrl} target="_blank" rel="noreferrer">
+              <KaggleIcon className="mr-1.5 h-3.5 w-3.5" /> Kaggle
+            </a>
+          </Button>
+        )}
         {project.extraUrl !== null && (
           <Button asChild size="sm" variant="ghost-glow">
             <a href={extraUrl} target="_blank" rel="noreferrer">
