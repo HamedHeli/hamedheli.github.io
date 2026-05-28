@@ -18,9 +18,11 @@ const projects: Project[] = [
     notebook: "DataAnalysis/Training & Test/Unbalanced Dataset",
     repo: "HamedHeli/Appeal-Prediction",
     highlight: "Overall Accuracy: +90% on 1.5% Minority Class",
+    githubUrl: "https://github.com/HamedHeli/Appeal-Prediction/tree/DataAnalysis/training-test/unbalanced-dataset",
     viewerUrl: null,
+    kaggleUrl: "https://www.kaggle.com/datasets/shashwatwork/cerebral-stroke-predictionimbalaced-dataset",
     extraLabel: "View HTML Report",
-    extraUrl: "https://hamedheli.github.io/Appeal-Prediction/Training%20%26%20Test/Unbalanced%20Dataset/Unbalanced-Dataset.html",
+    extraUrl: "https://hamedheli.github.io/Appeal-Prediction/training-test/unbalanced-dataset/Unbalanced-Dataset.html",
   },
 ];
 
