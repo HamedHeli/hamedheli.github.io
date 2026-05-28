@@ -1,6 +1,12 @@
 import { Github, ExternalLink, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const KaggleIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.825 13.05c.09 0 .18-.015.255-.045.09-.015.165-.06.24-.12.075-.045.12-.105.165-.18.045-.075.06-.165.06-.27V9.72c0-.105-.015-.195-.06-.27-.045-.075-.09-.135-.165-.18-.075-.045-.15-.09-.24-.12-.075-.03-.165-.045-.255-.045H17.25v4.17h1.575c.09 0 .18-.015.255-.045zm-2.325-4.68c.3 0 .585.045.84.135.27.09.495.21.69.375.195.165.345.36.45.6.12.24.165.51.165.81v2.115c0 .3-.045.57-.165.81-.105.24-.255.435-.45.6-.195.165-.42.285-.69.375-.255.09-.54.135-.84.135H14.25V8.37h2.25zm-4.41 4.68c.09 0 .18-.015.255-.045.09-.015.165-.06.24-.12.075-.045.12-.105.165-.18.045-.075.06-.165.06-.27V9.72c0-.105-.015-.195-.06-.27-.045-.075-.09-.135-.165-.18-.075-.045-.15-.09-.24-.12-.075-.03-.165-.045-.255-.045H11.25v4.17h1.575c.09 0 .18-.015.255-.045zm-2.325-4.68c.3 0 .585.045.84.135.27.09.495.21.69.375.195.165.345.36.45.6.12.24.165.51.165.81v2.115c0 .3-.045.57-.165.81-.105.24-.255.435-.45.6-.195.165-.42.285-.69.375-.255.09-.54.135-.84.135H8.25V8.37h2.25zm-4.155 4.68h1.95V8.37H4.125v4.68zM3 6h6.75v9H3V6z"/>
+  </svg>
+);
+
 export interface Project {
   title: string;
   description: string;
@@ -14,6 +20,7 @@ export interface Project {
   viewerLabel?: string;
   extraUrl?: string | null; // null hides the button
   extraLabel?: string;
+  kaggleUrl?: string | null; // null hides the button
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
