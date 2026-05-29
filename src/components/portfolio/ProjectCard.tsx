@@ -1,4 +1,4 @@
-import { Github, ExternalLink, BookOpen } from "lucide-react";
+import { Github, ExternalLink, BookOpen, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const KaggleIcon = ({ className }: { className?: string }) => (
