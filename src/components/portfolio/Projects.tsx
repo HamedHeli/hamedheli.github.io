@@ -33,24 +33,13 @@ const projects: Project[] = [
     highlight: "100% data-driven thresholds, replacing the arbitrary 80% rule",
     githubUrl: "https://github.com/ab-sa/biniLasso-paper",
     viewerUrl: null,
-    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41224177/",
-    extraLabel: "View on arXiv",
-    extraUrl: "https://arxiv.org/abs/2503.16687",
-  },
-];
-
-export const Projects = () => {
-  return (
-    <section id="projects" className="container mx-auto px-6 py-24">
-      <div className="mb-12 max-w-2xl">
-        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
-          // projects
-        </p>
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          Notebooks & experiments
+          Projects & Publications
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Each card links directly to the source notebook on GitHub, a rendered
+          Each card links directly to source code, notebooks, datasets, and
+          published research.
+        </p>
           preview, and a one-click launch environment.
         </p>
       </div>
