@@ -1,4 +1,4 @@
-import { Github, ExternalLink, BookOpen } from "lucide-react";
+import { Github, ExternalLink, BookOpen, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const KaggleIcon = ({ className }: { className?: string }) => (
@@ -21,6 +21,8 @@ export interface Project {
   extraUrl?: string | null; // null hides the button
   extraLabel?: string;
   kaggleUrl?: string | null; // null hides the button
+  pubmedUrl?: string | null; // null hides the button
+  arxivUrl?: string | null; // null hides the button
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
@@ -40,7 +42,7 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-muted-foreground">
-          0{index + 1} / {index === 0 ? "Notebook" : "Kaggle Project"}
+          0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : "Publication"}
         </span>
         <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
       </div>
@@ -87,10 +89,24 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
+        {project.pubmedUrl !== undefined && project.pubmedUrl !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={project.pubmedUrl} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> PubMed
+            </a>
+          </Button>
+        )}
         {project.extraUrl !== null && (
           <Button asChild size="sm" variant="ghost-glow">
             <a href={extraUrl} target="_blank" rel="noreferrer">
               {project.extraLabel ?? "Open in Colab"}
+            </a>
+          </Button>
+        )}
+        {project.arxivUrl !== undefined && project.arxivUrl !== null && (
+          <Button asChild size="sm" variant="link">
+            <a href={project.arxivUrl} target="_blank" rel="noreferrer">
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> View on arXiv
             </a>
           </Button>
         )}

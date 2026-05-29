@@ -24,6 +24,20 @@ const projects: Project[] = [
     extraLabel: "View HTML Report",
     extraUrl: "https://hamedheli.github.io/Appeal-Prediction/training-test/unbalanced-dataset/Unbalanced-Dataset.html",
   },
+  {
+    title: "biniLasso: Automated Cut-Point Detection",
+    description:
+      "A sparse cumulative binarization framework for high-dimensional survival analysis. I applied this novel approach to population administrative data to redefine clinical adherence thresholds for oral anticoagulants, shifting the paradigm from rigid consensus guidelines to data-driven prognostic risk zones.",
+    tags: ["Python", "R", "Survival Analysis", "Biostatistics"],
+    notebook: "README.md",
+    repo: "ab-sa/biniLasso-paper",
+    highlight: "100% data-driven thresholds, replacing the arbitrary 80% rule",
+    githubUrl: "https://github.com/ab-sa/biniLasso-paper",
+    viewerUrl: null,
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41224177/",
+    extraLabel: "View on arXiv",
+    extraUrl: "https://arxiv.org/abs/2503.16687",
+  },
 ];
 
 export const Projects = () => {
@@ -34,11 +48,11 @@ export const Projects = () => {
           // projects
         </p>
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          Notebooks & experiments
+          Projects & Publications
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Each card links directly to the source notebook on GitHub, a rendered
-          preview, and a one-click launch environment.
+          Each card links directly to source code, notebooks, datasets, and
+          published research.
         </p>
       </div>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
