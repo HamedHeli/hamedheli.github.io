@@ -21,6 +21,8 @@ export interface Project {
   extraUrl?: string | null; // null hides the button
   extraLabel?: string;
   kaggleUrl?: string | null; // null hides the button
+  pubmedUrl?: string | null; // null hides the button
+  arxivUrl?: string | null; // null hides the button
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
