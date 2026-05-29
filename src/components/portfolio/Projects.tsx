@@ -21,6 +21,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/HamedHeli/Appeal-Prediction/tree/DataAnalysis/training-test/unbalanced-dataset",
     viewerUrl: null,
     kaggleUrl: "https://www.kaggle.com/datasets/shashwatwork/cerebral-stroke-predictionimbalaced-dataset",
+    extraLabel: "View HTML Report",
     extraUrl: "https://hamedheli.github.io/Appeal-Prediction/training-test/unbalanced-dataset/Unbalanced-Dataset.html",
   },
   {
@@ -33,14 +34,25 @@ const projects: Project[] = [
     highlight: "100% data-driven thresholds, replacing the arbitrary 80% rule",
     githubUrl: "https://github.com/ab-sa/biniLasso-paper",
     viewerUrl: null,
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41224177/",
+    extraLabel: "View on arXiv",
+    extraUrl: "https://arxiv.org/abs/2503.16687",
+  },
+];
+
+export const Projects = () => {
+  return (
+    <section id="projects" className="container mx-auto px-6 py-24">
+      <div className="mb-12 max-w-2xl">
+        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-primary">
+          // projects
+        </p>
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
           Projects & Publications
         </h2>
         <p className="mt-3 text-muted-foreground">
           Each card links directly to source code, notebooks, datasets, and
           published research.
-        </p>
-          preview, and a one-click launch environment.
         </p>
       </div>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
