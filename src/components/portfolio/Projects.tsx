@@ -21,7 +21,8 @@ const projects: Project[] = [
     githubUrl: "https://github.com/HamedHeli/Appeal-Prediction/tree/DataAnalysis/training-test/unbalanced-dataset",
     viewerUrl: null,
     kaggleUrl: "https://www.kaggle.com/datasets/shashwatwork/cerebral-stroke-predictionimbalaced-dataset",
-    extraLabel: "View HTML Report",
+    extraUrl: "https://hamedheli.github.io/Appeal-Prediction/training-test/unbalanced-dataset/Unbalanced-Dataset.html",
+  },
   {
     title: "biniLasso: Automated Cut-Point Detection",
     description:
