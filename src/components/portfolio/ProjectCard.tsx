@@ -89,10 +89,24 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
+        {project.pubmedUrl !== undefined && project.pubmedUrl !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={project.pubmedUrl} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> PubMed
+            </a>
+          </Button>
+        )}
         {project.extraUrl !== null && (
           <Button asChild size="sm" variant="ghost-glow">
             <a href={extraUrl} target="_blank" rel="noreferrer">
               {project.extraLabel ?? "Open in Colab"}
+            </a>
+          </Button>
+        )}
+        {project.arxivUrl !== undefined && project.arxivUrl !== null && (
+          <Button asChild size="sm" variant="link">
+            <a href={project.arxivUrl} target="_blank" rel="noreferrer">
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> View on arXiv
             </a>
           </Button>
         )}
