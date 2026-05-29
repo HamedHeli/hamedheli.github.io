@@ -38,12 +38,11 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
   return (
     <article
       className="group relative flex flex-col rounded-2xl border border-border bg-card-gradient p-6 shadow-card transition-smooth hover:border-primary/40 hover:shadow-glow animate-fade-up"
+      style={{ animationDelay: `${index * 80}ms`, opacity: 0 }}
+    >
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-muted-foreground">
           0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : "Publication"}
-        </span>
-        <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
-      </div>
         </span>
         <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
       </div>
