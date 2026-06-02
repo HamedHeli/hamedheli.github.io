@@ -72,11 +72,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
-        <Button asChild size="sm" variant="secondary">
-          <a href={githubUrl} target="_blank" rel="noreferrer">
-            <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
-          </a>
-        </Button>
+        {project.githubUrl !== null && (
+          <Button asChild size="sm" variant="secondary">
+            <a href={githubUrl} target="_blank" rel="noreferrer">
+              <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
+            </a>
+          </Button>
+        )}
         {project.viewerUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={viewerUrl} target="_blank" rel="noreferrer">
