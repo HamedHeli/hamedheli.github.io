@@ -38,6 +38,21 @@ const projects: Project[] = [
     extraLabel: "View on arXiv",
     extraUrl: "https://arxiv.org/abs/2503.16687",
   },
+  {
+    title: "Predicting Prostate Cancer via GLM",
+    description:
+      "Leveraging Generalized Linear Models (GLMs) to quantify how cancer alters tissue mechanics. Analyzed 49 fresh post-surgery samples to establish a 20% shift in tissue viscoelasticity and using it as a novel biomarker for early detection of cancer.",
+    tags: ["Python", "GLM", "Predictive Modeling"],
+    notebook: "",
+    repo: "",
+    highlight: "Quantifying tumor effect on viscoelasticity (p<0.02)",
+    githubUrl: null,
+    viewerUrl: null,
+    extraUrl: null,
+    thesisUrl: "https://open.library.ubc.ca/search?q=%22quasi-linear+viscoelastic%22+prostate+Heli",
+    thesisLabel: "UBC Thesis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37939817/",
+  },
 ];
 
 export const Projects = () => {
