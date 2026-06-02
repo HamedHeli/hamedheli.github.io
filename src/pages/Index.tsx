@@ -4,7 +4,7 @@ import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 import { Footer } from "@/components/portfolio/Footer";
 
-const GITHUB_USER = "your-username";
+const GITHUB_USER = "HamedHeli";
 
 const Index = () => {
   return (
