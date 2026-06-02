@@ -23,6 +23,8 @@ export interface Project {
   kaggleUrl?: string | null; // null hides the button
   pubmedUrl?: string | null; // null hides the button
   arxivUrl?: string | null; // null hides the button
+  thesisUrl?: string | null;
+  thesisLabel?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
@@ -42,7 +44,7 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-muted-foreground">
-          0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : "Publication"}
+          0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : index === 2 ? "Publication" : "Ph.D. Thesis"}
         </span>
         <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
       </div>
@@ -70,11 +72,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
-        <Button asChild size="sm" variant="secondary">
-          <a href={githubUrl} target="_blank" rel="noreferrer">
-            <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
-          </a>
-        </Button>
+        {project.githubUrl !== null && (
+          <Button asChild size="sm" variant="secondary">
+            <a href={githubUrl} target="_blank" rel="noreferrer">
+              <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
+            </a>
+          </Button>
+        )}
         {project.viewerUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={viewerUrl} target="_blank" rel="noreferrer">
@@ -93,6 +97,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
           <Button asChild size="sm" variant="outline-soft">
             <a href={project.pubmedUrl} target="_blank" rel="noreferrer">
               <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> PubMed
+            </a>
+          </Button>
+        )}
+        {project.thesisUrl !== undefined && project.thesisUrl !== null && (
+          <Button asChild size="sm" variant="secondary">
+            <a href={project.thesisUrl} target="_blank" rel="noreferrer">
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> {project.thesisLabel ?? "Thesis"}
             </a>
           </Button>
         )}
