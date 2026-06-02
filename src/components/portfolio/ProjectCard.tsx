@@ -98,6 +98,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
+        {project.thesisUrl !== undefined && project.thesisUrl !== null && (
+          <Button asChild size="sm" variant="secondary">
+            <a href={project.thesisUrl} target="_blank" rel="noreferrer">
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> {project.thesisLabel ?? "Thesis"}
+            </a>
+          </Button>
+        )}
         {project.extraUrl !== null && (
           <Button asChild size="sm" variant="ghost-glow">
             <a href={extraUrl} target="_blank" rel="noreferrer">
