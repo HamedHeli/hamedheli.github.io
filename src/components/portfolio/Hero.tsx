@@ -22,7 +22,15 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero">
-              <a href="#projects">
+              <a
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
                 Browse projects <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
