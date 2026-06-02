@@ -23,6 +23,8 @@ export interface Project {
   kaggleUrl?: string | null; // null hides the button
   pubmedUrl?: string | null; // null hides the button
   arxivUrl?: string | null; // null hides the button
+  thesisUrl?: string | null;
+  thesisLabel?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
