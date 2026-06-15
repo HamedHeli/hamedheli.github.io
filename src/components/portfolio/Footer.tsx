@@ -23,14 +23,16 @@ export const Footer = ({ githubUser }: { githubUser: string }) => {
             <Github className="h-4 w-4" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/hamed-helisaz-826b1068/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="LinkedIn"
             className="rounded-lg border border-border p-2.5 text-muted-foreground transition-smooth hover:border-primary/50 hover:text-primary"
           >
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:hamedhelisaz@gmail.com"
             aria-label="Email"
             className="rounded-lg border border-border p-2.5 text-muted-foreground transition-smooth hover:border-primary/50 hover:text-primary"
           >
