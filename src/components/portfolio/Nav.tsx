@@ -9,9 +9,25 @@ export const Nav = () => {
           ml.portfolio
         </a>
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-          <a href="#projects" className="transition-smooth hover:text-foreground">Projects</a>
-          <a href="#skills" className="transition-smooth hover:text-foreground">Stack</a>
-          <a href="#contact" className="transition-smooth hover:text-foreground">Contact</a>
+          {[
+            { href: "#projects", label: "Projects" },
+            { href: "#skills", label: "Stack" },
+            { href: "#contact", label: "Contact" },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById(item.href.slice(1))
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="transition-smooth hover:text-foreground"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
