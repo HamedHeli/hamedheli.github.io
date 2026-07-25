@@ -47,7 +47,7 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-muted-foreground">
-          0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : index === 2 ? "Publication" : "Ph.D. Thesis"}
+          0{index + 1} / {project.label ?? "Project"}
         </span>
         <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
       </div>
