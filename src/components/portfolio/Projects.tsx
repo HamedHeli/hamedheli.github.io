@@ -13,7 +13,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/ab-sa/biniLasso-paper",
     viewerUrl: null,
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41224177/",
-    extraLabel: "View on arXiv",
+    extraLabel: "arXiv",
     extraUrl: "https://arxiv.org/abs/2503.16687",
   },
   {
@@ -44,9 +44,9 @@ const projects: Project[] = [
     githubUrl: null,
     viewerUrl: null,
     extraUrl: "https://www.ahajournals.org/doi/10.1161/JAHA.124.036466",
-    extraLabel: "Read JAHA Article",
+    extraLabel: "JAHA Article",
     extraUrl2: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext",
-    extraLabel2: "Conference Paper (CJD)",
+    extraLabel2: "Conference Paper",
   },
   {
     title: "Cardioprotective Drugs After CABG Surgery",
@@ -60,9 +60,9 @@ const projects: Project[] = [
     githubUrl: null,
     viewerUrl: null,
     extraUrl: "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70027",
-    extraLabel: "P2Y12 Study (Pharmacotherapy)",
+    extraLabel: "Pharmacotherapy",
     extraUrl2: "https://www.ahajournals.org/doi/10.1161/JAHA.124.038960",
-    extraLabel2: "ACEi/ARB Study (JAHA)",
+    extraLabel2: "JAHA",
   },
   {
     title: "Probabilistic Classify & Count for Rare Stroke Events",
@@ -76,7 +76,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/HamedHeli/Appeal-Prediction/tree/DataAnalysis/training-test/unbalanced-dataset",
     viewerUrl: null,
     kaggleUrl: "https://www.kaggle.com/datasets/shashwatwork/cerebral-stroke-predictionimbalaced-dataset",
-    extraLabel: "View HTML Report",
+    extraLabel: "HTML Report",
     extraUrl: "https://hamedheli.github.io/Appeal-Prediction/training-test/unbalanced-dataset/Unbalanced-Dataset.html",
   },
   {

@@ -113,14 +113,14 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
         {project.extraUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={extraUrl} target="_blank" rel="noreferrer">
-              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Open in Colab"}
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Colab"}
             </a>
           </Button>
         )}
         {project.arxivUrl !== undefined && project.arxivUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={project.arxivUrl} target="_blank" rel="noreferrer">
-              <FileText className="mr-1.5 h-3.5 w-3.5" /> View on arXiv
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> arXiv
             </a>
           </Button>
         )}
