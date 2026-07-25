@@ -15,6 +15,7 @@ export interface Project {
   repo: string; // full repo, e.g. "username/repo"
   branch?: string;
   highlight?: string;
+  label?: string; // header label e.g. "Publication"
   githubUrl?: string; // optional override
   viewerUrl?: string | null; // null hides the button
   viewerLabel?: string;
@@ -25,6 +26,8 @@ export interface Project {
   arxivUrl?: string | null; // null hides the button
   thesisUrl?: string | null;
   thesisLabel?: string;
+  extraUrl2?: string | null;
+  extraLabel2?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
