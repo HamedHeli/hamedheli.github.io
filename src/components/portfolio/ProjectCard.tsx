@@ -124,6 +124,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
+        {project.extraUrl2 !== undefined && project.extraUrl2 !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={project.extraUrl2} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel2 ?? "Link"}
+            </a>
+          </Button>
+        )}
       </div>
     </article>
   );
