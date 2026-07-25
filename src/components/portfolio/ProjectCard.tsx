@@ -76,7 +76,7 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
 
       <div className="mt-6 flex flex-wrap gap-2">
         {project.githubUrl !== null && (
-          <Button asChild size="sm" variant="secondary">
+          <Button asChild size="sm" variant="outline-soft">
             <a href={githubUrl} target="_blank" rel="noreferrer">
               <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
             </a>
@@ -104,21 +104,21 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
           </Button>
         )}
         {project.thesisUrl !== undefined && project.thesisUrl !== null && (
-          <Button asChild size="sm" variant="secondary">
+          <Button asChild size="sm" variant="outline-soft">
             <a href={project.thesisUrl} target="_blank" rel="noreferrer">
               <FileText className="mr-1.5 h-3.5 w-3.5" /> {project.thesisLabel ?? "Thesis"}
             </a>
           </Button>
         )}
         {project.extraUrl !== null && (
-          <Button asChild size="sm" variant="ghost-glow">
+          <Button asChild size="sm" variant="outline-soft">
             <a href={extraUrl} target="_blank" rel="noreferrer">
-              {project.extraLabel ?? "Open in Colab"}
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Open in Colab"}
             </a>
           </Button>
         )}
         {project.arxivUrl !== undefined && project.arxivUrl !== null && (
-          <Button asChild size="sm" variant="link">
+          <Button asChild size="sm" variant="outline-soft">
             <a href={project.arxivUrl} target="_blank" rel="noreferrer">
               <FileText className="mr-1.5 h-3.5 w-3.5" /> View on arXiv
             </a>
