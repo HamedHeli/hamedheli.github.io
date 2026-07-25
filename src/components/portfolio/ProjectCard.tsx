@@ -15,6 +15,7 @@ export interface Project {
   repo: string; // full repo, e.g. "username/repo"
   branch?: string;
   highlight?: string;
+  label?: string; // header label e.g. "Publication"
   githubUrl?: string; // optional override
   viewerUrl?: string | null; // null hides the button
   viewerLabel?: string;
@@ -25,6 +26,8 @@ export interface Project {
   arxivUrl?: string | null; // null hides the button
   thesisUrl?: string | null;
   thesisLabel?: string;
+  extraUrl2?: string | null;
+  extraLabel2?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
@@ -44,7 +47,7 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="font-mono text-xs text-muted-foreground">
-          0{index + 1} / {index === 0 ? "Notebook" : index === 1 ? "Kaggle Project" : index === 2 ? "Publication" : "Ph.D. Thesis"}
+          0{index + 1} / {project.label ?? "Project"}
         </span>
         <BookOpen className="h-4 w-4 text-primary opacity-70 transition-smooth group-hover:opacity-100" />
       </div>
@@ -118,6 +121,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
           <Button asChild size="sm" variant="link">
             <a href={project.arxivUrl} target="_blank" rel="noreferrer">
               <FileText className="mr-1.5 h-3.5 w-3.5" /> View on arXiv
+            </a>
+          </Button>
+        )}
+        {project.extraUrl2 !== undefined && project.extraUrl2 !== null && (
+          <Button asChild size="sm" variant="outline-soft">
+            <a href={project.extraUrl2} target="_blank" rel="noreferrer">
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel2 ?? "Link"}
             </a>
           </Button>
         )}
