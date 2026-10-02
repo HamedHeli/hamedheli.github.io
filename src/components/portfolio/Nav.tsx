@@ -6,11 +6,12 @@ export const Nav = () => {
           <span className="grid h-6 w-6 place-items-center rounded-md bg-primary/15 text-primary">
             {"{}"}
           </span>
-          ml.portfolio
+          Hamed Helisaz
         </a>
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
           {[
-            { href: "#projects", label: "Projects" },
+            { href: "#about", label: "About" },
+            { href: "#projects", label: "Research" },
             { href: "#skills", label: "Stack" },
             { href: "#contact", label: "Contact" },
           ].map((item) => (

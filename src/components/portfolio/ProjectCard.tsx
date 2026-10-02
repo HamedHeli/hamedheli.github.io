@@ -11,19 +11,17 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  notebook: string; // path inside the repo, e.g. "notebooks/cnn.ipynb"
-  repo: string; // full repo, e.g. "username/repo"
+  notebook: string;
+  repo: string;
   branch?: string;
   highlight?: string;
-  label?: string; // header label e.g. "Publication"
-  githubUrl?: string; // optional override
-  viewerUrl?: string | null; // null hides the button
-  viewerLabel?: string;
-  extraUrl?: string | null; // null hides the button
+  label?: string;
+  githubUrl?: string | null;
+  extraUrl?: string | null;
   extraLabel?: string;
-  kaggleUrl?: string | null; // null hides the button
-  pubmedUrl?: string | null; // null hides the button
-  arxivUrl?: string | null; // null hides the button
+  kaggleUrl?: string | null;
+  pubmedUrl?: string | null;
+  arxivUrl?: string | null;
   thesisUrl?: string | null;
   thesisLabel?: string;
   extraUrl2?: string | null;
@@ -32,12 +30,11 @@ export interface Project {
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const branch = project.branch ?? "main";
-  const githubUrl = project.githubUrl ?? `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`;
-  const viewerUrl = project.viewerUrl === undefined
-    ? `https://nbviewer.org/github/${project.repo}/blob/${branch}/${project.notebook}`
-    : project.viewerUrl;
+  const githubUrl = project.githubUrl === undefined
+    ? `https://github.com/${project.repo}/blob/${branch}/${project.notebook}`
+    : project.githubUrl;
   const extraUrl = project.extraUrl === undefined
-    ? `https://colab.research.google.com/github/${project.repo}/blob/${branch}/${project.notebook}`
+    ? null
     : project.extraUrl;
 
   return (
@@ -75,17 +72,10 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
-        {project.githubUrl !== null && (
+        {githubUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={githubUrl} target="_blank" rel="noreferrer">
               <Github className="mr-1.5 h-3.5 w-3.5" /> GitHub
-            </a>
-          </Button>
-        )}
-        {project.viewerUrl !== null && (
-          <Button asChild size="sm" variant="outline-soft">
-            <a href={viewerUrl} target="_blank" rel="noreferrer">
-              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.viewerLabel ?? "nbviewer"}
             </a>
           </Button>
         )}

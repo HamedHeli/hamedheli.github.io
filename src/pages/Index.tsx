@@ -1,5 +1,6 @@
 import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 import { Footer } from "@/components/portfolio/Footer";
@@ -12,6 +13,7 @@ const Index = () => {
       <Nav />
       <main>
         <Hero githubUser={GITHUB_USER} />
+        <About />
         <Projects />
         <Skills />
       </main>

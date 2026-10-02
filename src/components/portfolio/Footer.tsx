@@ -9,7 +9,7 @@ export const Footer = ({ githubUser }: { githubUser: string }) => {
             <span className="text-primary">$</span> let's build something together
           </p>
           <p className="mt-1 text-xs text-muted-foreground/70">
-            © {new Date().getFullYear()} ML Portfolio. Built with Lovable.
+            © {new Date().getFullYear()} Hamed Helisaz
           </p>
         </div>
         <div className="flex items-center gap-2">

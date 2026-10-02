@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 
 export const Hero = ({ githubUser }: { githubUser: string }) => {
   return (
@@ -9,16 +9,21 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
         <div className="mx-auto max-w-3xl text-center animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-mono text-muted-foreground backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Available for collaboration
+            Ph.D. &nbsp;·&nbsp; 5+ Peer-Reviewed Publications &nbsp;·&nbsp; Medical Data Processing &amp; Modeling
           </div>
+          <p className="mb-4 font-mono text-base tracking-widest text-muted-foreground">
+            Hamed Helisaz
+          </p>
           <h1 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">
-            Machine Learning
+            ML Researcher
             <br />
-            <span className="text-gradient">Projects & Notebooks</span>
+            <span className="text-gradient">&amp; Biostatistician</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            A curated collection of my work in deep learning, NLP, and data science —
-            mostly built and explored inside Jupyter notebooks.
+            PhD-trained researcher with peer-reviewed publications in{" "}
+            <span className="text-foreground/80 font-medium">JAHA</span> and{" "}
+            <span className="text-foreground/80 font-medium">Pharmacotherapy</span>.
+            Working at the intersection of survival analysis, causal inference, and applied machine learning.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero">
@@ -31,12 +36,17 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
                     ?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
               >
-                Browse projects <ArrowRight className="ml-2 h-4 w-4" />
+                View Research <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline-soft">
               <a href={`https://github.com/${githubUser}`} target="_blank" rel="noreferrer">
                 <Github className="mr-2 h-4 w-4" /> GitHub
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline-soft">
+              <a href="https://www.linkedin.com/in/hamed-helisaz-826b1068/" target="_blank" rel="noreferrer">
+                <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
               </a>
             </Button>
           </div>
