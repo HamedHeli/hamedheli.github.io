@@ -100,10 +100,10 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
-        {project.extraUrl !== null && (
+        {extraUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={extraUrl} target="_blank" rel="noreferrer">
-              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Colab"}
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Link"}
             </a>
           </Button>
         )}
