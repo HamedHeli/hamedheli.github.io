@@ -9,7 +9,7 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
         <div className="mx-auto max-w-3xl text-center animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-mono text-muted-foreground backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Ph.D. &nbsp;·&nbsp; 5+ Peer-Reviewed Publications &nbsp;·&nbsp; Medical Data Processing &amp; Modeling
+            Ph.D. Engineering, Applied Science &nbsp;·&nbsp; UBC
           </div>
           <p className="mb-4 font-mono text-base tracking-widest text-muted-foreground">
             Hamed Helisaz

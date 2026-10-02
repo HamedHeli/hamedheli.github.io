@@ -1,23 +1,17 @@
-import { BookOpen, GraduationCap, BarChart3, FlaskConical } from "lucide-react";
+import { GraduationCap, BrainCircuit, FlaskConical } from "lucide-react";
 
 const stats = [
-  {
-    icon: BookOpen,
-    value: "5+",
-    label: "Peer-Reviewed Publications",
-    sub: "JAHA, Pharmacotherapy, arXiv",
-  },
   {
     icon: GraduationCap,
     value: "Ph.D.",
     label: "University of British Columbia",
-    sub: "Medical Data Processing and Modeling",
+    sub: "Engineering, Applied Science",
   },
   {
-    icon: BarChart3,
-    value: "Causal Inference",
-    label: "Survival Analysis · IPCW",
-    sub: "Population-scale clinical data",
+    icon: BrainCircuit,
+    value: "ML",
+    label: "Machine Learning",
+    sub: "Causal Inference · Survival Analysis",
   },
   {
     icon: FlaskConical,
@@ -47,7 +41,7 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-3">
           {stats.map((s) => (
             <div
               key={s.label}
