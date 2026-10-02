@@ -8,6 +8,12 @@ const stats = [
     sub: "Engineering, Applied Science",
   },
   {
+    icon: GraduationCap,
+    value: "M.Sc.",
+    label: "University of British Columbia",
+    sub: "Statistics",
+  },
+  {
     icon: BrainCircuit,
     value: "ML",
     label: "Machine Learning",
@@ -41,7 +47,7 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div
               key={s.label}
