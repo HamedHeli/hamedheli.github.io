@@ -20,7 +20,7 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
             <span className="text-gradient">&amp; Biostatistician</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            PhD-trained researcher with peer-reviewed publications in{" "}
+            PhD researcher with peer-reviewed publications in{" "}
             <span className="text-foreground/80 font-medium">JAHA</span> and{" "}
             <span className="text-foreground/80 font-medium">Pharmacotherapy</span>.
             Working at the intersection of survival analysis, causal inference, and applied machine learning.

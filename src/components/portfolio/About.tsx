@@ -39,11 +39,10 @@ export const About = () => {
             Research Background
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            I'm a PhD-trained researcher bridging applied statistics and machine learning for real-world
-            healthcare problems. My work ranges from developing novel biostatistical methods — published
-            and peer-reviewed — to building ML models on large linked administrative datasets via{" "}
-            <span className="text-foreground/80">Population Data BC</span>. I bring both the methodological
-            rigour of academic research and the practical instincts to ship working code.
+            I'm a PhD researcher bridging applied statistics and machine learning for real-world
+            healthcare problems. My work ranges from developing novel biostatistical methods, published
+            and peer-reviewed, to building ML models on large administrative datasets, like{" "}
+            <span className="text-foreground/80">Population Data BC</span>.
           </p>
         </div>
 
