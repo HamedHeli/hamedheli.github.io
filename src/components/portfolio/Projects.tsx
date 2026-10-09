@@ -11,9 +11,10 @@ const publications: Project[] = [
     label: "Machine Learning",
     highlight: "100% data-driven thresholds, replacing the arbitrary 80% rule",
     githubUrl: "https://github.com/ab-sa/biniLasso-paper",
-    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41224177/",
-    extraLabel: "arXiv",
-    extraUrl: "https://arxiv.org/abs/2503.16687",
+    papers: [
+      { label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/41224177/" },
+      { label: "Preprint", url: "https://arxiv.org/abs/2503.16687" },
+    ],
   },
   {
     title: "Oral Anticoagulant Adherence & AF Outcomes",
@@ -25,10 +26,10 @@ const publications: Project[] = [
     label: "Joint Modelling",
     highlight: "Adherence-driven risk stratification across warfarin & DOACs",
     githubUrl: null,
-    extraUrl: "https://www.ahajournals.org/doi/10.1161/JAHA.124.036466",
-    extraLabel: "JAHA Article",
-    extraUrl2: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext",
-    extraLabel2: "Conference Paper",
+    papers: [
+      { label: "Published", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.036466" },
+      { label: "Presented", url: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext" },
+    ],
   },
   {
     title: "Cardioprotective Drugs After CABG Surgery",
@@ -40,10 +41,10 @@ const publications: Project[] = [
     label: "Causal Inference",
     highlight: "IPCW-weighted causal survival models on linked population data",
     githubUrl: null,
-    extraUrl: "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70027",
-    extraLabel: "Pharmacotherapy",
-    extraUrl2: "https://www.ahajournals.org/doi/10.1161/JAHA.124.038960",
-    extraLabel2: "JAHA",
+    papers: [
+      { label: "Published 1", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.038960" },
+      { label: "Published 2", url: "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70027" },
+    ],
   },
   {
     title: "Predicting Prostate Cancer via GLM",
@@ -58,7 +59,7 @@ const publications: Project[] = [
     extraUrl: null,
     thesisUrl: "https://open.library.ubc.ca/search?q=%22quasi-linear+viscoelastic%22+prostate+Heli",
     thesisLabel: "UBC Thesis",
-    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37939817/",
+    papers: [{ label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" }],
   },
 ];
 

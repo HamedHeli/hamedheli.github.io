@@ -20,12 +20,9 @@ export interface Project {
   extraUrl?: string | null;
   extraLabel?: string;
   kaggleUrl?: string | null;
-  pubmedUrl?: string | null;
-  arxivUrl?: string | null;
+  papers?: { label: string; url: string }[];
   thesisUrl?: string | null;
   thesisLabel?: string;
-  extraUrl2?: string | null;
-  extraLabel2?: string;
 }
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
@@ -86,13 +83,13 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
             </a>
           </Button>
         )}
-        {project.pubmedUrl !== undefined && project.pubmedUrl !== null && (
-          <Button asChild size="sm" variant="outline-soft">
-            <a href={project.pubmedUrl} target="_blank" rel="noreferrer">
-              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> PubMed
+        {project.papers?.map((paper) => (
+          <Button key={paper.url} asChild size="sm" variant="outline-soft">
+            <a href={paper.url} target="_blank" rel="noreferrer">
+              <FileText className="mr-1.5 h-3.5 w-3.5" /> {paper.label}
             </a>
           </Button>
-        )}
+        ))}
         {project.thesisUrl !== undefined && project.thesisUrl !== null && (
           <Button asChild size="sm" variant="outline-soft">
             <a href={project.thesisUrl} target="_blank" rel="noreferrer">
@@ -104,20 +101,6 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
           <Button asChild size="sm" variant="outline-soft">
             <a href={extraUrl} target="_blank" rel="noreferrer">
               <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel ?? "Link"}
-            </a>
-          </Button>
-        )}
-        {project.arxivUrl !== undefined && project.arxivUrl !== null && (
-          <Button asChild size="sm" variant="outline-soft">
-            <a href={project.arxivUrl} target="_blank" rel="noreferrer">
-              <FileText className="mr-1.5 h-3.5 w-3.5" /> arXiv
-            </a>
-          </Button>
-        )}
-        {project.extraUrl2 !== undefined && project.extraUrl2 !== null && (
-          <Button asChild size="sm" variant="outline-soft">
-            <a href={project.extraUrl2} target="_blank" rel="noreferrer">
-              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> {project.extraLabel2 ?? "Link"}
             </a>
           </Button>
         )}
