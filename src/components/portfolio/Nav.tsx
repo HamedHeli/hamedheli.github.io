@@ -11,6 +11,7 @@ export const Nav = () => {
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
           {[
             { href: "#about", label: "About" },
+            { href: "#experience", label: "Experience" },
             { href: "#projects", label: "Research" },
             { href: "#skills", label: "Stack" },
             { href: "#contact", label: "Contact" },
