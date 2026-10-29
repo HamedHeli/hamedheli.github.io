@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { Briefcase } from "lucide-react";
 
 type Role = {
@@ -6,7 +5,7 @@ type Role = {
   org: string;
   period: string;
   client?: string;
-  points: ReactNode[];
+  points: string[];
 };
 
 const roles: Role[] = [
@@ -25,12 +24,7 @@ const roles: Role[] = [
     period: "Oct 2021 – Present",
     client: "UBC Faculty of Pharmaceutical Sciences",
     points: [
-      <>
-        <strong className="text-foreground">UBC Pharmaceutical Sciences</strong> (2021–2023):
-        survival analysis on Population Data BC with propensity score weighting and matching;
-        identified cardiovascular drugs that reduce the risk of major adverse events (published in
-        JAHA and Pharmacotherapy).
-      </>,
+      "Survival analysis on Population Data BC with propensity score weighting and matching; identified cardiovascular drugs that reduce the risk of major adverse events (published in JAHA and Pharmacotherapy).",
       "Evaluation of adding pharmacists into primary and community care.",
       "Quality of care evaluation for local government and the Ministry of Health.",
     ],
@@ -91,8 +85,8 @@ export const Experience = () => {
                 </div>
               </div>
               <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
-                {r.points.map((pt, i) => (
-                  <li key={i}>{pt}</li>
+                {r.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
                 ))}
               </ul>
             </div>
