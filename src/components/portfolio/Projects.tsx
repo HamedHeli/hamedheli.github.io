@@ -59,7 +59,11 @@ const publications: Project[] = [
     extraUrl: null,
     thesisUrl: "https://open.library.ubc.ca/search?q=%22quasi-linear+viscoelastic%22+prostate+Heli",
     thesisLabel: "UBC Thesis",
-    papers: [{ label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" }],
+    papers: [
+      { label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" },
+      { label: "Method 1", url: "https://doi.org/10.1115/1.4050036" },
+      { label: "Method 2", url: "https://doi.org/10.1007/s11340-022-00837-7" },
+    ],
   },
 ];
 
@@ -112,6 +116,16 @@ export const Projects = () => {
         </h2>
         <p className="mt-3 text-muted-foreground">
           Peer-reviewed publications, Kaggle projects, and coursework. Each card links to the published paper, source code, or dataset.
+          {" "}12 journal articles and 10 conference abstracts in total; full list on{" "}
+          <a
+            href="https://scholar.google.com/citations?user=ysnRjxoAAAAJ&hl=en"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            Google Scholar
+          </a>
+          .
         </p>
       </div>
       {categories.map((c, ci) => {
