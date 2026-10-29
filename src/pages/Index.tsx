@@ -3,6 +3,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
+import { Publications } from "@/components/portfolio/Publications";
 import { Skills } from "@/components/portfolio/Skills";
 import { Footer } from "@/components/portfolio/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <About />
         <Experience />
         <Projects />
+        <Publications />
         <Skills />
       </main>
       <Footer githubUser={GITHUB_USER} />

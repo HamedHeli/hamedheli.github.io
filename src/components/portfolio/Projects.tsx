@@ -27,7 +27,7 @@ const publications: Project[] = [
     highlight: "Adherence-driven risk stratification across warfarin & DOACs",
     githubUrl: null,
     papers: [
-      { label: "Published", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.036466" },
+      { label: "Published", url: "https://doi.org/10.1161/JAHA.124.035639" },
       { label: "Presented", url: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext" },
     ],
   },
@@ -42,8 +42,8 @@ const publications: Project[] = [
     highlight: "IPCW-weighted causal survival models on linked population data",
     githubUrl: null,
     papers: [
-      { label: "Published 1", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.038960" },
-      { label: "Published 2", url: "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70027" },
+      { label: "Published 1", url: "https://doi.org/10.1161/JAHA.124.035215" },
+      { label: "Published 2", url: "https://doi.org/10.1002/phar.70047" },
     ],
   },
   {

@@ -13,6 +13,7 @@ export const Nav = () => {
             { href: "#about", label: "About" },
             { href: "#experience", label: "Experience" },
             { href: "#projects", label: "Research" },
+            { href: "#publications", label: "Publications" },
             { href: "#skills", label: "Stack" },
             { href: "#contact", label: "Contact" },
           ].map((item) => (
