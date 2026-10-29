@@ -27,7 +27,7 @@ const publications: Project[] = [
     highlight: "Adherence-driven risk stratification across warfarin & DOACs",
     githubUrl: null,
     papers: [
-      { label: "Published", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.036466" },
+      { label: "Published", url: "https://doi.org/10.1161/JAHA.124.035639" },
       { label: "Presented", url: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext" },
     ],
   },
@@ -42,8 +42,8 @@ const publications: Project[] = [
     highlight: "IPCW-weighted causal survival models on linked population data",
     githubUrl: null,
     papers: [
-      { label: "Published 1", url: "https://www.ahajournals.org/doi/10.1161/JAHA.124.038960" },
-      { label: "Published 2", url: "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.70027" },
+      { label: "Published 1", url: "https://doi.org/10.1161/JAHA.124.035215" },
+      { label: "Published 2", url: "https://doi.org/10.1002/phar.70047" },
     ],
   },
   {
@@ -59,7 +59,11 @@ const publications: Project[] = [
     extraUrl: null,
     thesisUrl: "https://open.library.ubc.ca/search?q=%22quasi-linear+viscoelastic%22+prostate+Heli",
     thesisLabel: "UBC Thesis",
-    papers: [{ label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" }],
+    papers: [
+      { label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" },
+      { label: "Method 1", url: "https://doi.org/10.1115/1.4050036" },
+      { label: "Method 2", url: "https://doi.org/10.1007/s11340-022-00837-7" },
+    ],
   },
 ];
 
@@ -112,6 +116,16 @@ export const Projects = () => {
         </h2>
         <p className="mt-3 text-muted-foreground">
           Peer-reviewed publications, Kaggle projects, and coursework. Each card links to the published paper, source code, or dataset.
+          {" "}Also 10 conference abstracts in the Canadian Journal of Cardiology; full record on{" "}
+          <a
+            href="https://scholar.google.com/citations?user=ysnRjxoAAAAJ&hl=en"
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary underline-offset-4 hover:underline"
+          >
+            Google Scholar
+          </a>
+          .
         </p>
       </div>
       {categories.map((c, ci) => {

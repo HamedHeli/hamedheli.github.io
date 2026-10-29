@@ -24,7 +24,7 @@ const roles: Role[] = [
     period: "Oct 2021 – Present",
     client: "UBC Faculty of Pharmaceutical Sciences",
     points: [
-      "Survival analysis on Population Data BC with propensity score weighting and matching; identified cardiovascular drugs that reduce the risk of major adverse events (published in JAHA and Pharmacotherapy).",
+      "Survival analysis on Population Data BC with propensity score weighting and matching; identified cardiovascular drugs that reduce the risk of major adverse events (published in JAHA, Journal of Thrombosis and Haemostasis and Pharmacotherapy).",
       "Evaluation of adding pharmacists into primary and community care.",
       "Quality of care evaluation for local government and the Ministry of Health.",
     ],

@@ -21,8 +21,10 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
             PhD researcher with peer-reviewed publications in{" "}
-            <span className="text-foreground/80 font-medium">JAHA</span> and{" "}
-            <span className="text-foreground/80 font-medium">Pharmacotherapy</span>.
+            <span className="text-foreground/80 font-medium">JAHA</span>,{" "}
+            <span className="text-foreground/80 font-medium">Journal of Thrombosis and Haemostasis</span>,{" "}
+            <span className="text-foreground/80 font-medium">Pharmacotherapy</span> and{" "}
+            <span className="text-foreground/80 font-medium">Acta Biomaterialia</span>.
             Working at the intersection of survival analysis, causal inference, and applied machine learning.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
