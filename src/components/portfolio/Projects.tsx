@@ -116,7 +116,7 @@ export const Projects = () => {
         </h2>
         <p className="mt-3 text-muted-foreground">
           Peer-reviewed publications, Kaggle projects, and coursework. Each card links to the published paper, source code, or dataset.
-          {" "}12 journal articles and 10 conference abstracts in total; full list on{" "}
+          {" "}Also 10 conference abstracts in the Canadian Journal of Cardiology; full record on{" "}
           <a
             href="https://scholar.google.com/citations?user=ysnRjxoAAAAJ&hl=en"
             target="_blank"
