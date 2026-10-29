@@ -12,8 +12,8 @@ const publications: Project[] = [
     highlight: "100% data-driven thresholds, replacing the arbitrary 80% rule",
     githubUrl: "https://github.com/ab-sa/biniLasso-paper",
     papers: [
-      { label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/41224177/" },
-      { label: "Preprint", url: "https://arxiv.org/abs/2503.16687" },
+      { label: "JTH 2026", url: "https://pubmed.ncbi.nlm.nih.gov/41224177/" },
+      { label: "arXiv Preprint", url: "https://arxiv.org/abs/2503.16687" },
     ],
   },
   {
@@ -27,8 +27,8 @@ const publications: Project[] = [
     highlight: "Adherence-driven risk stratification across warfarin & DOACs",
     githubUrl: null,
     papers: [
-      { label: "Published", url: "https://doi.org/10.1161/JAHA.124.035639" },
-      { label: "Presented", url: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext" },
+      { label: "JAHA 2024", url: "https://doi.org/10.1161/JAHA.124.035639" },
+      { label: "Abstract · Can J Diabetes", url: "https://www.canadianjournalofdiabetes.com/article/S1499-2671(24)00196-2/fulltext" },
     ],
   },
   {
@@ -42,8 +42,8 @@ const publications: Project[] = [
     highlight: "IPCW-weighted causal survival models on linked population data",
     githubUrl: null,
     papers: [
-      { label: "Published 1", url: "https://doi.org/10.1161/JAHA.124.035215" },
-      { label: "Published 2", url: "https://doi.org/10.1002/phar.70047" },
+      { label: "JAHA 2024", url: "https://doi.org/10.1161/JAHA.124.035215" },
+      { label: "Pharmacotherapy 2025", url: "https://doi.org/10.1002/phar.70047" },
     ],
   },
   {
@@ -60,9 +60,9 @@ const publications: Project[] = [
     thesisUrl: "https://open.library.ubc.ca/search?q=%22quasi-linear+viscoelastic%22+prostate+Heli",
     thesisLabel: "UBC Thesis",
     papers: [
-      { label: "Published", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" },
-      { label: "Method 1", url: "https://doi.org/10.1115/1.4050036" },
-      { label: "Method 2", url: "https://doi.org/10.1007/s11340-022-00837-7" },
+      { label: "Acta Biomaterialia 2024", url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" },
+      { label: "J Biomech Eng 2021", url: "https://doi.org/10.1115/1.4050036" },
+      { label: "Exp Mechanics 2022", url: "https://doi.org/10.1007/s11340-022-00837-7" },
     ],
   },
 ];
@@ -98,6 +98,15 @@ const otherWork: Project[] = [
   },
 ];
 
+const selected = [
+  { journal: "Journal of the American Heart Association", count: 2, url: "https://doi.org/10.1161/JAHA.124.035639" },
+  { journal: "Journal of Thrombosis and Haemostasis", count: 1, url: "https://pubmed.ncbi.nlm.nih.gov/41224177/" },
+  { journal: "Pharmacotherapy", count: 1, url: "https://doi.org/10.1002/phar.70047" },
+  { journal: "Acta Biomaterialia", count: 1, url: "https://pubmed.ncbi.nlm.nih.gov/37939817/" },
+  { journal: "Journal of Biomechanical Engineering", count: 1, url: "https://doi.org/10.1115/1.4050036" },
+  { journal: "Experimental Mechanics", count: 1, url: "https://doi.org/10.1007/s11340-022-00837-7" },
+];
+
 const categories = [
   { title: "Peer-reviewed Publications", items: publications },
   { title: "Kaggle", items: kaggle },
@@ -127,6 +136,26 @@ export const Projects = () => {
           </a>
           .
         </p>
+        <div className="mt-5">
+          <p className="mb-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            Selected publications in
+          </p>
+          <ul className="flex flex-wrap gap-2">
+            {selected.map((s) => (
+              <li key={s.journal}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card/60 px-2.5 py-1 text-xs font-medium text-foreground/90 transition-smooth hover:border-primary/50 hover:text-primary"
+                >
+                  {s.journal}
+                  {s.count > 1 && <span className="text-primary">×{s.count}</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       {categories.map((c, ci) => {
         const offset = categories.slice(0, ci).reduce((n, prev) => n + prev.items.length, 0);

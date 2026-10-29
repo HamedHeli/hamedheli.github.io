@@ -9,23 +9,23 @@ export const Hero = ({ githubUser }: { githubUser: string }) => {
         <div className="mx-auto max-w-3xl text-center animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-mono text-muted-foreground backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Ph.D. Engineering, Applied Science &nbsp;·&nbsp; UBC
+            Ph.D. &nbsp;·&nbsp; M.Sc. Statistics &nbsp;·&nbsp; UBC
           </div>
           <p className="mb-4 font-mono text-base tracking-widest text-muted-foreground">
             Hamed Helisaz
           </p>
           <h1 className="font-sans text-5xl font-bold tracking-tight md:text-7xl">
-            ML Researcher
+            Data Scientist
             <br />
             <span className="text-gradient">&amp; Biostatistician</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            PhD researcher with peer-reviewed publications in{" "}
+            Peer-reviewed publications in{" "}
             <span className="text-foreground/80 font-medium">JAHA</span>,{" "}
             <span className="text-foreground/80 font-medium">Journal of Thrombosis and Haemostasis</span>,{" "}
             <span className="text-foreground/80 font-medium">Pharmacotherapy</span> and{" "}
             <span className="text-foreground/80 font-medium">Acta Biomaterialia</span>.
-            Working at the intersection of survival analysis, causal inference, and applied machine learning.
+            I turn population health data into real-world evidence with survival analysis, causal inference, and machine learning.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero">
