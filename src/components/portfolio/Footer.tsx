@@ -23,7 +23,7 @@ export const Footer = ({ githubUser }: { githubUser: string }) => {
             <Github className="h-4 w-4" />
           </a>
           <a
-            href="https://www.linkedin.com/in/hamed-helisaz-826b1068/"
+            href="https://www.linkedin.com/in/hamed-helisaz-phd-826b1068/"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"

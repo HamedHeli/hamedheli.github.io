@@ -1,19 +1,27 @@
 const groups = [
   {
+    title: "Statistics",
+    items: [
+      "Survival Analysis",
+      "Causal Inference",
+      "IPCW · Propensity Scores",
+      "Joint Modelling",
+      "Design of Experiments",
+      "Sample Size Estimation",
+      "GLMs",
+    ],
+  },
+  {
     title: "Languages",
-    items: ["Python", "SQL", "R", "Bash"],
+    items: ["R", "Python", "SQL", "Bash"],
   },
   {
-    title: "ML / DL",
-    items: ["PyTorch", "TensorFlow", "scikit-learn", "XGBoost", "HuggingFace"],
+    title: "ML",
+    items: ["scikit-learn", "XGBoost", "Lasso / Penalized Models", "PyTorch", "TensorFlow"],
   },
   {
-    title: "Data",
-    items: ["pandas", "NumPy", "Polars", "Spark", "DuckDB"],
-  },
-  {
-    title: "Tools",
-    items: ["Jupyter", "Docker", "MLflow", "Weights & Biases", "Git"],
+    title: "Data & Tools",
+    items: ["tidyverse", "pandas", "Spark", "DuckDB", "Docker", "MLflow", "Git"],
   },
 ];
 
