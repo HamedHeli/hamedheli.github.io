@@ -5,6 +5,7 @@ type Role = {
   title: string;
   org: string;
   period: string;
+  client?: string;
   points: ReactNode[];
 };
 
@@ -22,9 +23,10 @@ const roles: Role[] = [
     title: "Co-Founder & CEO",
     org: "GranTAZ Consulting",
     period: "Oct 2021 – Present",
+    client: "UBC Faculty of Pharmaceutical Sciences",
     points: [
       <>
-        <strong className="text-foreground">UBC Faculty of Pharmaceutical Sciences</strong> (2021–2023):
+        <strong className="text-foreground">UBC Pharmaceutical Sciences</strong> (2021–2023):
         survival analysis on Population Data BC with propensity score weighting and matching;
         identified cardiovascular drugs that reduce the risk of major adverse events (published in
         JAHA and Pharmacotherapy).
@@ -81,6 +83,11 @@ export const Experience = () => {
                   <p className="text-base font-semibold leading-tight">{r.title}</p>
                   <p className="mt-1 text-sm font-medium text-foreground/80">{r.org}</p>
                   <p className="mt-0.5 font-mono text-xs text-muted-foreground">{r.period}</p>
+                  {r.client && (
+                    <p className="mt-2 inline-block rounded-md border border-primary/40 bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary">
+                      Lead client: {r.client}
+                    </p>
+                  )}
                 </div>
               </div>
               <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
